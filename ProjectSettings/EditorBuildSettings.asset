@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/API_Malo/Scene/API_Malo.unity
-    guid: 78d31879e98819048ae955a3cd3d1333
+    path: Assets/Scenes/SceneAR.unity
+    guid: ca639bb7f16501e40a33c57fba0b9297
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 5bdc276f532a88e4c9be23d3851e6937, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 5bdc276f532a88e4c9be23d3851e6937,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 81e0102e31a74b34187ed9bd713fc9e5,
+      type: 2}
