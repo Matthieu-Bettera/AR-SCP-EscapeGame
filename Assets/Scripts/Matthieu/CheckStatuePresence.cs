@@ -6,11 +6,11 @@ public class CheckStatuePresence : MonoBehaviour
 {
 
     public bool statueIsHere = false;
-   
+    public float range = 0.3f;
 
     private void Update()
     {
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position, 0.3f,Vector3.forward);
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, range,Vector3.one);
 
         foreach (RaycastHit hit in hits)
         {
@@ -24,6 +24,14 @@ public class CheckStatuePresence : MonoBehaviour
                 statueIsHere = false;
             }
         }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 
 
