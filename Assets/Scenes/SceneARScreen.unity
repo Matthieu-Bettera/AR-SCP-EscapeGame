@@ -748,6 +748,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SCP-173
       objectReference: {fileID: 0}
+    - target: {fileID: 1531352113486180606, guid: 074cf747bba102443b7da0f84b80c4ae,
+        type: 3}
+      propertyPath: m_TagString
+      value: Statue
+      objectReference: {fileID: 0}
     - target: {fileID: 1859981155608232662, guid: 074cf747bba102443b7da0f84b80c4ae,
         type: 3}
       propertyPath: TPPositions.Array.data[0]
@@ -1128,6 +1133,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2553727326776727539, guid: 0d64d78760a76ff45ac58e82c214ca28,
+        type: 3}
+      propertyPath: posNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300241407092892714, guid: 0d64d78760a76ff45ac58e82c214ca28,
+        type: 3}
+      propertyPath: posNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545400479610651168, guid: 0d64d78760a76ff45ac58e82c214ca28,
+        type: 3}
+      propertyPath: posNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7546592368995554214, guid: 0d64d78760a76ff45ac58e82c214ca28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1187,6 +1207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Positions
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880192486382669959, guid: 0d64d78760a76ff45ac58e82c214ca28,
+        type: 3}
+      propertyPath: posNumber
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d64d78760a76ff45ac58e82c214ca28, type: 3}
