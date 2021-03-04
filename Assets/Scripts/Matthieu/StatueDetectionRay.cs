@@ -37,16 +37,17 @@ public class StatueDetectionRay : MonoBehaviour
                 {
                     Debug.Log("c touché");
                 }
+                else
+                {
+                    gauge.AugmentTime();
+                }
             }
 
 
 
 
         }
-        else
-        {
-            gauge.AugmentTime();
-        }
+    
     }
 
 
