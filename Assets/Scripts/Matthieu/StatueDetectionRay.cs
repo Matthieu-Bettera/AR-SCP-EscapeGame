@@ -33,13 +33,15 @@ public class StatueDetectionRay : MonoBehaviour
             Debug.Log(hit.collider);
             if (hit.collider!=null)
             {
-                if (hit.collider.tag == ("Statue"))
+                if (hit.collider.tag == ("Screen"))
                 {
                     Debug.Log("c touché");
+                    ScreenControler screen = hit.collider.GetComponent<ScreenControler>();
+                    screen.screenIsOn = true;
                 }
                 else
                 {
-                    gauge.AugmentTime();
+                   // gauge.AugmentTime();
                 }
             }
 
