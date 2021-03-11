@@ -11,8 +11,11 @@ public class TimeGauge : MonoBehaviour
 
    [SerializeField] private Slider slider;
 
+    public static TimeGauge instance;
+
     private void Start()
     {
+        instance = this;
         slider.value = startValue;
     }
 

@@ -12,13 +12,15 @@ public class ScreenControler : MonoBehaviour
     public bool screenIsOn=false;
 
     [SerializeField]Transform linkedPosition;
+    public CheckStatuePresence presence;
 
-    //public CheckStatuePresence presence;
+  
 
     // Start is called before the first frame update
     void Start()
     {
         screenRenderer = this.gameObject.GetComponent<MeshRenderer>();
+        presence = linkedPosition.gameObject.GetComponent<CheckStatuePresence>();
 
         screenRenderer.material = m_screenOff;
     }
@@ -34,6 +36,17 @@ public class ScreenControler : MonoBehaviour
         {
             screenRenderer.material = m_screenOff;
         }
+
+
+        if (presence.statueIsHere == true && screenIsOn==false)
+        {
+            TimeGauge.instance.AugmentTime();
+        }
+       
+      
+
+
+
     }
 
 
