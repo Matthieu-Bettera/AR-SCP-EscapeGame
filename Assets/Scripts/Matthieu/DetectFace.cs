@@ -32,12 +32,12 @@ public class DetectFace : MonoBehaviour
                 min = dot;
                 visibleFace = face;
 
-                Debug.Log("Premier scan: " + visibleFace.name);
+                
             }
 
        
 
-            Debug.Log("Deuxième scan: " + visibleFace.name);
+
         }
 
         foreach (Transform face in faces)

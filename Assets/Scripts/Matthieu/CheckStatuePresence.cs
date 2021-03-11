@@ -8,22 +8,43 @@ public class CheckStatuePresence : MonoBehaviour
     public bool statueIsHere = false;
     public float range = 0.3f;
 
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, range,Vector3.one);
 
-        foreach (RaycastHit hit in hits)
+
+        if (hits.Length > 0)
         {
-            if (hit.collider.gameObject.tag == "Statue")
+            foreach (RaycastHit hit in hits)
             {
-               
-                statueIsHere = true;
-            }
-            else
-            {
-                statueIsHere = false;
+
+
+                if (hit.collider.gameObject.tag == "Statue")
+                {
+
+                    statueIsHere = true;
+                }
+
+
+
+
             }
         }
+        else
+        {
+            statueIsHere = false;
+        }
+       
+
+
+
+
+       
     }
 
 
