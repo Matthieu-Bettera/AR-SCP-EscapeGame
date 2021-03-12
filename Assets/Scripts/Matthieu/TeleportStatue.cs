@@ -40,5 +40,37 @@ public class TeleportStatue : MonoBehaviour
         int randomPos = Random.Range(0, TPPositions.Length);
 
         this.gameObject.transform.position = TPPositions[randomPos].transform.position;
+
+
+       Debug.Log(TPPositions[randomPos].transform.rotation);
+        int rot=90;
+
+    
+
+        switch (randomPos)
+        {
+            case 0:
+                rot = 90;
+                break;
+            case 1:
+                rot = -90;
+                break;
+            case 2:
+                rot = 180;
+                break;
+            case 3:
+                rot = 180;
+                break;
+            default:
+                break;
+        }
+
+        Vector3 rotationV = new Vector3(-90, 0, rot);
+
+        this.gameObject.transform.rotation = Quaternion.Euler(rotationV);
+
+
+
+
     }
 }
