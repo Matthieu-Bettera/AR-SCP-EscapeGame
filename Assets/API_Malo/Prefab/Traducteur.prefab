@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1664096610063488219}
   - component: {fileID: 1664096610063488036}
   m_Layer: 0
-  m_Name: test
+  m_Name: Traducteur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,9 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3221983db496042bcf5b441020ee30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 0}
   CurrentWord: TRAHISON
-  numbers: 
+  Translated: 
   numberlist:
   - 1
   - 2

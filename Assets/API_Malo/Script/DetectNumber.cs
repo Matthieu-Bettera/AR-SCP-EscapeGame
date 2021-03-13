@@ -36,12 +36,12 @@ public class DetectNumber : MonoBehaviour
 
         if (_CurrentChar < MaxCharacter)
         {   manager.GetComponent<_Manager>().CurrentChar++;
-            manager.GetComponent<_Manager>().WordToDisplay += NumberToDisplay;
+            manager.GetComponent<_Manager>().P_ChatBox += NumberToDisplay;
         }
         else
         {
-            CurrentWord = manager.GetComponent<_Manager>().WordToDisplay.Substring(0,MaxCharacter-1);
-            manager.GetComponent<_Manager>().WordToDisplay = CurrentWord + NumberToDisplay;
+            CurrentWord = manager.GetComponent<_Manager>().P_ChatBox.Substring(0,MaxCharacter-1);
+            manager.GetComponent<_Manager>().P_ChatBox = CurrentWord + NumberToDisplay;
             Debug.Log(CurrentWord);
            
         }
