@@ -8,5 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/API_Malo/Scene/API_Malo.unity
     guid: 78d31879e98819048ae955a3cd3d1333
+  - enabled: 1
+    path: Assets/Main_Menu/Scene/Main_Menu.unity
+    guid: f8bb6ebcf47c34e4ebed4cdce6f88d86
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 5bdc276f532a88e4c9be23d3851e6937, type: 2}
