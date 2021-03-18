@@ -109,7 +109,7 @@ public class _Manager : MonoBehaviour
             if (NbCorrectAnswer == 2)
             {
                 SetupMalo();
-                _Answer = Question_1.Expected_Answer;
+                _Answer = Question_3.Expected_Answer;
                 _translator.CurrentWord = Question_3.Question;
                
             }
