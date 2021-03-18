@@ -59,7 +59,10 @@ public class TeleportStatue : MonoBehaviour
                 rot = 180;
                 break;
             case 3:
-                rot = 180;
+                rot = 360;
+                break;
+            case 4:
+                rot = 90;
                 break;
             default:
                 break;

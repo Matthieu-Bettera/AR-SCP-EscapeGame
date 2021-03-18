@@ -42,9 +42,9 @@ public class DetectFace : MonoBehaviour
 
         foreach (Transform face in faces)
         {
-         
-                ScreenControler screen = face.gameObject.GetComponent<ScreenControler>();
-                screen.screenIsOn = false;
+
+            ScreenControler screen = face.gameObject.GetComponent<ScreenControler>();
+            screen.screenIsOn = false;
           
         }
         ScreenControler visibleScreen = visibleFace.gameObject.GetComponent<ScreenControler>();
