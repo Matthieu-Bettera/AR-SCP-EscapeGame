@@ -42,6 +42,10 @@ public class ScreenControler : MonoBehaviour
         {
             TimeGauge.instance.AugmentTime();
         }
+        else if(presence.statueIsHere == true && screenIsOn == true)
+        {
+            TimeGauge.instance.DescendTime();
+        }
        
       
 

@@ -285,6 +285,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &304599013
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Material
+
+    17894'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!4 &328074612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 328074612, guid: 806731a7033d4ab46a38837e50269cfa,
@@ -584,6 +613,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6305700178767257699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1108143044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7014524482128880676, guid: 9faf3d518c3fe3c49b37f3ed75eb5fae,
+    type: 3}
+  m_PrefabInstance: {fileID: 7014524482437862380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1108143047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108143044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9dd8eb57752a84fabdba9ed45dff4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1165807794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1165807794, guid: 806731a7033d4ab46a38837e50269cfa,
@@ -819,35 +866,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1993381496192900044, guid: 074cf747bba102443b7da0f84b80c4ae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 074cf747bba102443b7da0f84b80c4ae, type: 3}
---- !u!21 &1531610205
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Material
-
-    17864'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1620711911
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +914,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1531610205}
+  - {fileID: 304599013}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1201,22 +1219,22 @@ PrefabInstance:
     - target: {fileID: 4734831345014132126, guid: 0068347f3db2e894d90379b4928932e8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -375
+      value: -370.4
       objectReference: {fileID: 0}
     - target: {fileID: 4734831345014132126, guid: 0068347f3db2e894d90379b4928932e8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -19
+      value: -21.3
       objectReference: {fileID: 0}
     - target: {fileID: 4734831345014132126, guid: 0068347f3db2e894d90379b4928932e8,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 324.9245
+      value: 1282.9824
       objectReference: {fileID: 0}
     - target: {fileID: 4734831345014132126, guid: 0068347f3db2e894d90379b4928932e8,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.668015
+      value: 33.92193
       objectReference: {fileID: 0}
     - target: {fileID: 4734831345014132126, guid: 0068347f3db2e894d90379b4928932e8,
         type: 3}

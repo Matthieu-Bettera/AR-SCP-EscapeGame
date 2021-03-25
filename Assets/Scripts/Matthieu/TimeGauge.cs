@@ -24,4 +24,9 @@ public class TimeGauge : MonoBehaviour
     {
         slider.value += Time.deltaTime * timeMultiplier;
     }
+
+    public void DescendTime()
+    {
+        slider.value -= Time.deltaTime * timeMultiplier;
+    }
 }
