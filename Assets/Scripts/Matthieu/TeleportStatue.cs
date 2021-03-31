@@ -9,22 +9,29 @@ public class TeleportStatue : MonoBehaviour
 
     public float startTime=5f;
     public float countdownTime;
+    public float speed = 30;
+
+    //Rigidbody rb;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Teleport();
+        //rb = this.GetComponent<Rigidbody>();
+        Teleport(Random.Range(0, TPPositions.Length));
         countdownTime = startTime;
+       
         
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         if (countdownTime <= 0)
         {
-            Teleport();
+            Teleport(Random.Range(0, TPPositions.Length));         
             countdownTime = startTime;
            
         }
@@ -32,22 +39,29 @@ public class TeleportStatue : MonoBehaviour
         {
             countdownTime -= Time.deltaTime;
         }
+
+       
     }
 
+  
 
-    void Teleport()
+
+    void Teleport(int pos)
     {
-        int randomPos = Random.Range(0, TPPositions.Length);
 
-        this.gameObject.transform.position = TPPositions[randomPos].transform.position;
+  
+        Vector3 direction = TPPositions[pos].transform.position;
 
 
-       Debug.Log(TPPositions[randomPos].transform.rotation);
+        this.transform.position = direction;
+
+
+       
         int rot=90;
 
     
 
-        switch (randomPos)
+        switch (pos)
         {
             case 0:
                 rot = 90;
