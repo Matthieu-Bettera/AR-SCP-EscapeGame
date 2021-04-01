@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class _Manager : MonoBehaviour
 {
     [Header("END SCREEN")]
-
     public GameObject _GO_EndScreen;
     public Animator _EndScreen;
  
@@ -21,6 +20,8 @@ public class _Manager : MonoBehaviour
     int NbCorrectAnswer = 0;
    public  string _Answer;
     string _PlayerMsg;
+    Countdown _Countdown;
+    GameObject _MalusObj;
    
     Malo_Translator _translator;
  
@@ -44,32 +45,26 @@ public class _Manager : MonoBehaviour
     public Malo_Answer Question_2;
     public Malo_Answer Question_3;
     GameObject MaloChatBox;
+    public Animator ErrorTrigg;
    
     void Start()
     {
-       
         StartCoroutine(WaitBeforeDisplay());
        
         if(NbCorrectAnswer == 0)
         {
-            
             _Answer = Question_1.Expected_Answer;
             _translator.CurrentWord = Question_1.Question;
         }
+
+        _MalusObj = GameObject.Find("Manager");
+        _Countdown = _MalusObj.GetComponent<Countdown>();
     }
 
     void Update()
     {
         _PlayerMsg = P_ChatBox;
         TipBar.text = P_ChatBox;
-        
-
-
-
-      
-
-      
-
     }
     public void DeleteString()
     {
@@ -79,9 +74,6 @@ public class _Manager : MonoBehaviour
     }
     public void Send() // Quand le joueur a cliqué sur le bouton pour envoyer un message
     {
-        
-
-
         if (CurrentChar != 0)
         {
             SetupPlayer();
@@ -91,9 +83,12 @@ public class _Manager : MonoBehaviour
             if(PlayerText.text == _Answer)
             {
                 NbCorrectAnswer++;
-                
             }
-            
+            else
+            {
+                ErrorTrigg.SetBool("Error", true);
+                _Countdown.Malus();
+            }
                 P_ChatBox = Deleted;                               // efface le mot stocké 
                 CurrentChar = 0;                                  // stuff pour ecrire
                 TextCanvas.SetActive(true);                      // Change de canvas
@@ -118,26 +113,20 @@ public class _Manager : MonoBehaviour
                 _GO_EndScreen.SetActive(true);
                 _EndScreen.SetBool("FinalScreen", true);
             }
-
         }
     }
                 
-  
     public void OpenMenu()
     {
         UI_Telephone.SetActive(true);
-        TextCanvas.SetActive(false);
-
+        TextCanvas.SetActive(true);
     }
     void SetupPlayer()
     {
-       
         PlayerChatBox = Instantiate(PlayerSpeechBubble, ListContent.transform);
     
         PlayerText = PlayerChatBox.GetComponentInChildren<Text>();
         PlayerText.text = _PlayerMsg;
-
-
     }
 
     void SetupMalo()
@@ -152,14 +141,14 @@ public class _Manager : MonoBehaviour
         
         if(NbCorrectAnswer == 0)
         {
-            
             _Answer = Question_1.Expected_Answer;
             _translator.CurrentWord = Question_1.Question;
             Debug.Log(_translator.gameObject.name);
-          
         }
     }
-    
-  
-   
+
+    public void ResetError()
+    {
+        ErrorTrigg.SetBool("IsError", false);
+    }
 }

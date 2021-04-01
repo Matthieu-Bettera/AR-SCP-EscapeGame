@@ -15,7 +15,11 @@ public class Check_Code : MonoBehaviour
     public List<Text> CodeText = new List<Text>();
     public List<Text> RapportText = new List<Text>();
     public List<Rapports> Rapport_SCP = new List<Rapports>();
-    [SerializeField] string SceneName; 
+    
+    [SerializeField] 
+    public string SceneMalO; 
+    public string SceneTuyaux;
+    public string SceneAR;
 
     private void Start()
     {
@@ -25,22 +29,26 @@ public class Check_Code : MonoBehaviour
     }
     public void ConfirmMachine()
     {
+        SetMachines();
         Result = MachineText[0].text + MachineText[1].text;
         if(Result == Password_682)
         {
             Debug.Log("SCENE_682");
+            SceneManager.LoadScene(SceneTuyaux);
         }
         if(Result == Password_Malo)
         {
-            SceneManager.LoadScene(SceneName);
+            SceneManager.LoadScene(SceneMalO);
         }
     }
     public void ConfirmCode()
     {
+        SetCode();
         Result = CodeText[0].text + CodeText[1].text + CodeText[2].text+ CodeText[3].text+ CodeText[4].text+ CodeText[5].text;
         if(Result == LastPassword)
         {
             Debug.Log("SCENE_FINAL");
+            SceneManager.LoadScene(SceneAR);
         }
     }
     public void ConfirmRapport()
@@ -53,5 +61,21 @@ public class Check_Code : MonoBehaviour
                 _rapport.Rapport_Enable();
             }
         }
+    }
+
+    void SetMachines()
+    {
+        MachineText[0] = GameObject.Find("Machine Pos1").GetComponent<Text>();
+        MachineText[1] = GameObject.Find("Machine Pos2").GetComponent<Text>();
+    }
+
+    void SetCode()
+    {
+        CodeText[0] = GameObject.Find("POS_1").GetComponent<Text>();
+        CodeText[1] = GameObject.Find("POS_2").GetComponent<Text>();
+        CodeText[2] = GameObject.Find("POS_3").GetComponent<Text>();
+        CodeText[3] = GameObject.Find("POS_4").GetComponent<Text>();
+        CodeText[4] = GameObject.Find("POS_5").GetComponent<Text>();
+        CodeText[5] = GameObject.Find("POS_6").GetComponent<Text>();
     }
 }

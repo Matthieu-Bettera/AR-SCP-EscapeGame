@@ -17,9 +17,6 @@ public class ChangeValue : MonoBehaviour
     void Update()
     {
         AccurateText.text = "" + StartValue; 
-        
-        
-       
     }
  
     public void ADD()
