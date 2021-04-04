@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class _Manager : MonoBehaviour
 {
     [Header("END SCREEN")]
@@ -46,6 +47,8 @@ public class _Manager : MonoBehaviour
     public Malo_Answer Question_3;
     GameObject MaloChatBox;
     public Animator ErrorTrigg;
+
+    public GameObject ARWin;
    
     void Start()
     {
@@ -74,7 +77,15 @@ public class _Manager : MonoBehaviour
     }
     public void Send() // Quand le joueur a cliqué sur le bouton pour envoyer un message
     {
-        if (CurrentChar != 0)
+
+        if (TipBar.text == "173")
+        {
+            ARWin.SetActive(true);
+           
+            Debug.Log("WIN");
+        }
+
+            if (CurrentChar != 0)
         {
             SetupPlayer();
             string Deleted = "";
