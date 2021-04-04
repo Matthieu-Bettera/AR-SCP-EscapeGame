@@ -9,7 +9,7 @@
 	Matthieu Delannoy   : Machine AR
 
 
-			## Problèmes rencontrés :
+## Problèmes rencontrés :
 
 			
 	L'objectif était de créer une télé composée de 5 écrans (4 autour et un au dessus) ou la statue apparaissait.
