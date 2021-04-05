@@ -33,5 +33,5 @@
 
 	Pierre Tahon :
 Le cour de code etait très interessant , je trouvais la methode de nous faire travailler directement sur de la pratique plutot que sur du theorique plutot efficace .
-Après il y a bel et bien un point negatif a cette methode c'est que ça nous force parfois a bacler certains projets , car on n'as pas le temps de s'occuper du projet en cour et d'un autre projet dans une autre matiere . 
+Après il y a bel et bien un point negatif à cette methode c'est que ça nous force parfois à bacler certains projets , car on n'as pas le temps de s'occuper du projet en cour et d'un autre projet dans une autre matiere . 
 Néanmoins faire le runner et le rogue-like etait plutot amusant , ça aurait ete dommage de ne pas avoir à les faire .
