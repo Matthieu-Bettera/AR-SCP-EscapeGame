@@ -11,15 +11,8 @@
 
 ## Problèmes rencontrés :
 
-				 1: l'AR
-	 
-	L'objectif était de créer une télé composée de 5 écrans (4 autour et un au dessus) ou la statue apparaissait.
-	Ces écrans ne s'allumait que si le joueur était présent devant. 
-	Le but était de garder en vision la statue alors qu'une jauge augmentait si on ne la regardait pas, cette dite jauge descendait quand la statue était en visuel.
-	Malheureusement même si tout cela était fonctionnel l'objectif était que le joueur puisse tourner autour de la statue mais l'application en AR s'est révélé impossible, 
-	la télé ne voulant pas apparaître quand demandé et même si elle apparaissait la rotation autour de celle-ci était impossible.
 				
-				2: Faire un traducteur fonctionnel
+				1: Faire un traducteur fonctionnel
 				
 	L'objectif etait de faire un traducteur qui traduirait le français en langage par odre alphabetique inversé et d'utiliser ce traducteur afin de créer une conversation
 	entre le joueur et Malo .
@@ -35,3 +28,10 @@
 	Le traducteur est attaché au prefab de la discussion de Malo , il est chargé d'ecouter le manager et de traduire ce que dit le manager .
 	Le manager quand à lui est chargé d'analyser ce que dit le joueur et de changer de reponse en fonction de ce qu'a repondu le joueur et des scriptable objects.
 	Pour finir le scriptable object est composé d'un simple string modifiable obligatoirement écrit en majuscule sans espaces qui constitue la reponse à traduire.
+
+## Ce que chacun pense du cours de code :
+
+	Pierre Tahon :
+Le cour de code etait très interessant , je trouvais la methode de nous faire travailler directement sur de la pratique plutot que sur du theorique plutot efficace .
+Après il y a bel et bien un point negatif a cette methode c'est que ça nous force parfois a bacler certains projets , car on n'as pas le temps de s'occuper du projet en cour et d'un autre projet dans une autre matiere . 
+Néanmoins faire le runner et le rogue-like etait plutot amusant , ça aurait ete dommage de ne pas avoir à les faire .
